@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abertura de Empresa 100% Online | Facilita Contabilidade</title>
+  <meta name="description" content="Abra sua empresa com segurança e rapidez. Processo 100% online, sem burocracia. Facilita Contabilidade cuida de tudo pra você." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #1a9e45;
+      --green-dark: #157a35;
+      --orange: #f47c20;
+      --orange-light: #ff9340;
+      --white: #ffffff;
+      --gray-light: #f5f5f5;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      overflow-x: hidden;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--orange);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .header-date {
+      color: rgba(255,255,255,0.85);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--green);
+      padding: 48px 24px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 50%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -40px;
+      width: 260px; height: 260px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50%;
+    }
+
+    .app-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--orange);
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    .app-icon svg { width: 44px; height: 44px; }
+    .app-icon .star {
+      position: absolute;
+      top: -6px; right: -6px;
+      background: var(--white);
+      color: var(--orange);
+      border-radius: 50%;
+      width: 20px; height: 20px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 8vw, 52px);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: var(--orange-light); }
+
+    .hero p {
+      color: rgba(255,255,255,0.88);
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 520px;
+      margin: 0 auto 32px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--orange);
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 18px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(244,124,32,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(244,124,32,0.5); }
+    .btn-primary svg { width: 20px; height: 20px; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      width: 48px;
+      height: 4px;
+      background: var(--orange);
+      border-radius: 4px;
+      margin: 0 auto 32px;
+    }
+
+    /* ── FEATURES ── */
+    .features {
+      background: var(--green);
+      padding: 0 24px 52px;
+    }
+    .feature-list {
+      list-style: none;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .feature-list li:last-child { border-bottom: none; }
+    .check-icon {
+      flex-shrink: 0;
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.4);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .check-icon svg { width: 16px; height: 16px; stroke: rgba(255,255,255,0.85); }
+
+    /* ── STEPS ── */
+    .steps-section {
+      background: #fff;
+      padding: 56px 24px;
+      text-align: center;
+    }
+    .section-tag {
+      display: inline-block;
+      background: #e8f7ee;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 12px;
+    }
+    .steps-section h2 {
+      font-size: clamp(24px, 6vw, 36px);
+      font-weight: 900;
+      color: #111;
+      margin-bottom: 40px;
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .step-card {
+      background: var(--gray-light);
+      border-radius: 16px;
+      padding: 28px 20px;
+      text-align: center;
+    }
+    .step-number {
+      width: 48px; height: 48px;
+      background: var(--green);
+      color: #fff;
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 20px; font-weight: 900;
+      margin-bottom: 14px;
+    }
+    .step-card h3 { font-size: 15px; font-weight: 700; color: #111; margin-bottom: 8px; }
+    .step-card p { font-size: 13px; color: #555; line-height: 1.5; }
+
+    /* ── SOCIAL PROOF ── */
+    .proof-section {
+      background: var(--green);
+      padding: 48px 24px;
+      text-align: center;
+    }
+    .proof-section h2 {
+      color: #fff;
+      font-size: clamp(22px, 5vw, 32px);
+      font-weight: 900;
+      margin-bottom: 32px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .stat-item { text-align: center; }
+    .stat-number {
+      display: block;
+      font-size: clamp(26px, 7vw, 40px);
+      font-weight: 900;
+      color: var(--orange-light);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* ── FORM SECTION ── */
+    .form-section {
+      background: #fff;
+      padding: 56px 24px;
+    }
+    .form-wrapper {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .form-wrapper .section-tag { display: block; text-align: center; margin-bottom: 12px; }
+    .form-wrapper h2 {
+      text-align: center;
+      font-size: clamp(22px, 5vw, 32px);
+      font-weight: 900;
+      color: #111;
+      margin-bottom: 8px;
+    }
+    .form-wrapper .sub {
+      text-align: center;
+      color: #666;
+      font-size: 15px;
+      margin-bottom: 32px;
+    }
+
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 6px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid #e5e5e5;
+      border-radius: 12px;
+      font-size: 15px;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus { border-color: var(--green); }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--green);
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 18px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 6px 20px rgba(26,158,69,0.35);
+    }
+    .btn-submit:hover { background: var(--green-dark); transform: translateY(-2px); }
+
+    .or-divider {
+      text-align: center;
+      margin: 24px 0;
+      position: relative;
+      color: #aaa;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .or-divider::before, .or-divider::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 42%;
+      height: 1px;
+      background: #e5e5e5;
+    }
+    .or-divider::before { left: 0; }
+    .or-divider::after { right: 0; }
+
+    .btn-whatsapp {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: #25d366;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.35);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-whatsapp:hover { background: #1da850; transform: translateY(-2px); }
+    .btn-whatsapp svg { width: 24px; height: 24px; fill: #fff; }
+
+    .privacy-note {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    /* ── SUCCESS MESSAGE ── */
+    #success-msg {
+      display: none;
+      background: #e8f7ee;
+      border: 2px solid var(--green);
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      margin-top: 16px;
+    }
+    #success-msg h3 { color: var(--green); font-size: 20px; margin-bottom: 8px; }
+    #success-msg p { color: #444; font-size: 14px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--orange);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-weight: 800;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .footer-icon {
+      width: 32px; height: 32px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+    }
+    .footer-handle { color: rgba(255,255,255,0.85); font-size: 12px; }
+    .footer-right { text-align: right; }
+    .footer-right span {
+      display: block;
+      color: rgba(255,255,255,0.85);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ── STICKY CTA (mobile) ── */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: var(--green);
+      padding: 12px 20px;
+      z-index: 100;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.12);
+      display: flex;
+      gap: 10px;
+    }
+    .sticky-cta a, .sticky-cta button {
+      flex: 1;
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px;
+      padding: 14px 8px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+    }
+    .sticky-form-btn {
+      background: #fff;
+      color: var(--green);
+    }
+    .sticky-wa-btn {
+      background: #25d366;
+      color: #fff;
+    }
+    .sticky-wa-btn svg { width: 18px; height: 18px; fill: #fff; }
+
+    body { padding-bottom: 72px; }
+
+    @media (min-width: 640px) {
+      .sticky-cta { display: none; }
+      body { padding-bottom: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <div class="logo-icon">F</div>
+    Facilita Contabilidade
+  </div>
+  <span class="header-date">Jun 2026</span>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="app-icon">
+    <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="4" width="16" height="16" rx="3" fill="white" opacity="0.9"/>
+      <rect x="24" y="4" width="16" height="16" rx="3" fill="white" opacity="0.9"/>
+      <rect x="4" y="24" width="16" height="16" rx="3" fill="#f47c20"/>
+      <rect x="24" y="24" width="16" height="16" rx="3" fill="white" opacity="0.9"/>
+    </svg>
+    <div class="star">★</div>
+  </div>
+
+  <div class="badge">Abertura de Empresa · 100% Online</div>
+
+  <h1>Todo grande negócio<br>começa com<br>um <span>CNPJ</span></h1>
+
+  <p>Dê o primeiro passo com segurança e tenha uma equipe especializada cuidando de todo o processo.</p>
+
+  <a href="#formulario" class="btn-primary">
+    Solicite atendimento agora
+    <svg viewBox="0 0 20 20" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 10h12M10 4l6 6-6 6"/>
+    </svg>
+  </a>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="divider"></div>
+  <ul class="feature-list">
+    <li>
+      <div class="check-icon">
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 8l3.5 3.5L13 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      Processo simplificado
+    </li>
+    <li>
+      <div class="check-icon">
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 8l3.5 3.5L13 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      Atendimento especializado
+    </li>
+    <li>
+      <div class="check-icon">
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 8l3.5 3.5L13 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      Sem burocracia
+    </li>
+  </ul>
+</section>
+
+<!-- STEPS -->
+<section class="steps-section">
+  <div class="section-tag">Como funciona</div>
+  <h2>Abra sua empresa em<br><span style="color:var(--green)">4 passos simples</span></h2>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-number">1</div>
+      <h3>Fale com a gente</h3>
+      <p>Entre em contato pelo formulário ou WhatsApp.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">2</div>
+      <h3>Análise gratuita</h3>
+      <p>Nossa equipe analisa o melhor enquadramento para você.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">3</div>
+      <h3>Documentação</h3>
+      <p>Cuidamos de toda a burocracia digital por você.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">4</div>
+      <h3>CNPJ ativo!</h3>
+      <p>Sua empresa pronta para operar com segurança jurídica.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="proof-section">
+  <h2>Empresas abertas<br>com a Facilita</h2>
+  <div class="stats-grid">
+    <div class="stat-item">
+      <span class="stat-number">500+</span>
+      <span class="stat-label">Empresas abertas</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">100%</span>
+      <span class="stat-label">Online e seguro</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">7 dias</span>
+      <span class="stat-label">Tempo médio</span>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="formulario">
+  <div class="form-wrapper">
+    <span class="section-tag">Contato gratuito</span>
+    <h2>Solicite seu<br><span style="color:var(--green)">atendimento agora</span></h2>
+    <p class="sub">Preencha abaixo e nossa equipe entra em contato em até 1 hora útil.</p>
+
+    <form id="lead-form" action="https://formsubmit.co/caiolandim2021@gmail.com" method="POST">
+      <!-- FormSubmit config -->
+      <input type="hidden" name="_subject" value="Novo lead – Abertura de Empresa | Facilita Contabilidade">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="">
+      <input type="text" name="_honey" style="display:none">
+
+      <div class="form-group">
+        <label for="nome">Nome completo *</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+      </div>
+      <div class="form-group">
+        <label for="telefone">Telefone / WhatsApp *</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required />
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+      </div>
+
+      <button type="submit" class="btn-submit">
+        Quero abrir minha empresa →
+      </button>
+    </form>
+
+    <div id="success-msg">
+      <h3>✅ Recebemos seu contato!</h3>
+      <p>Nossa equipe vai entrar em contato em breve pelo WhatsApp ou e-mail informado.</p>
+    </div>
+
+    <div class="or-divider">ou fale direto pelo WhatsApp</div>
+
+    <a href="https://wa.me/5511993953519?text=Ol%C3%A1%2C+quero+abrir+minha+empresa!" class="btn-whatsapp" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.570-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Falar no WhatsApp
+    </a>
+
+    <p class="privacy-note">🔒 Seus dados estão seguros. Não enviamos spam.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <div class="footer-icon">F</div>
+    <div>
+      <div>@facilitacontab</div>
+      <div class="footer-handle" style="font-weight:400">Facilita Contabilidade Digital</div>
+    </div>
+  </div>
+  <div class="footer-right">
+    <span>Anúncio</span>
+    <span>Jun 2026</span>
+  </div>
+</footer>
+
+<!-- STICKY CTA (mobile only) -->
+<div class="sticky-cta">
+  <button class="sticky-form-btn" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})">
+    📋 Preencher formulário
+  </button>
+  <a href="https://wa.me/5511993953519?text=Ol%C3%A1%2C+quero+abrir+minha+empresa!" class="sticky-wa-btn" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.570-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    WhatsApp
+  </a>
+</div>
+
+<script>
+  // Mask telefone
+  document.getElementById('telefone').addEventListener('input', function(e) {
+    let v = e.target.value.replace(/\D/g, '');
+    if (v.length <= 10) v = v.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+    else v = v.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+    e.target.value = v.trim().replace(/-$/, '');
+  });
+
+  // Form submission (AJAX via FormSubmit)
+  document.getElementById('lead-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('.btn-submit');
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+
+    const data = new FormData(this);
+
+    try {
+      await fetch(this.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+      this.style.display = 'none';
+      document.getElementById('success-msg').style.display = 'block';
+    } catch {
+      btn.textContent = 'Quero abrir minha empresa →';
+      btn.disabled = false;
+      alert('Erro ao enviar. Tente pelo WhatsApp.');
+    }
+  });
+</script>
+
+</body>
+</html>
